@@ -6,12 +6,14 @@ int main(void) {
     sf::RenderWindow window(sf::VideoMode({200, 200}), "SFML works!");
     sf::Texture texture;
 
-    if (!texture.loadFromFile("assets/character.png", false)) {
+    if (!texture.loadFromFile("examples/02-sprite/assets/character.png", false)) {
         std::cout << "Failed to load texture.\n";
     }
-
+    texture.setSmooth(false);
+    
     sf::Sprite sprite(texture);
     sprite.setTextureRect(sf::IntRect({0, 64*10}, {64, 64})); // Walk Texture Position
+    sprite.setScale({3, 3});
 
     while (window.isOpen())
     {

@@ -24,5 +24,5 @@ add_custom_command(
 	TARGET example_sprite POST_BUILD
 	COMMAND ${CMAKE_COMMAND} -E copy_if_different 
 			${CMAKE_CURRENT_SOURCE_DIR}/assets/character.png
-			${CMAKE_BINARY_DIR}/assets/character.png
+			${CMAKE_CURRENT_BINARY_DIR}/assets/character.png
 )
