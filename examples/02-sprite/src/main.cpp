@@ -1,5 +1,8 @@
+// #include <unistd.h>
+#include <chrono>
+#include <thread>
 #include <iostream>
-#include <unistd.h>
+
 #include <SFML/Graphics.hpp>
 
 int main(void) {
@@ -37,6 +40,7 @@ int main(void) {
         window.draw(sprite);
         window.display();
         
-        sleep(1);
+        // sleep(1);
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
     }
 }
